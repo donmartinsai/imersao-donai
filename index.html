@@ -74,6 +74,7 @@ section{position:relative;z-index:1}
 .app-num{font-size:.7rem;font-weight:700;color:var(--green);letter-spacing:.1em;margin-bottom:6px}
 .app-card h3{font-size:1rem;font-weight:800;margin-bottom:6px}
 .app-card p{color:var(--muted);font-size:.85rem;line-height:1.6}
+.app-card-full{grid-column:span 2}
 
 /* STATS */
 .stats-section{background:rgba(255,106,26,.04);border-top:1px solid rgba(0,255,136,.07);border-bottom:1px solid rgba(0,255,136,.07)}
@@ -125,7 +126,8 @@ footer p{font-size:.75rem;color:var(--muted)}
 @media(max-width:860px){
   .hero-inner,.sobre-grid{grid-template-columns:1fr;gap:24px}
   .hero-img{order:-1}
-  .apps-grid{grid-template-columns:1fr}
+  .apps-grid{display:flex;flex-direction:column;gap:12px}
+  .app-card,.app-card-full{width:100%;height:auto;min-height:auto}
   .stats-grid{grid-template-columns:1fr 1fr;gap:16px}
   .sec-inner{padding:40px 16px}
   .sobre-grid{gap:24px}
@@ -157,11 +159,11 @@ footer p{font-size:.75rem;color:var(--muted)}
   .sec-title{font-size:1.35rem;margin-bottom:6px}
   .sec-sub{font-size:.82rem;margin-bottom:20px}
   
-  .app-card{padding:14px}
+  .apps-grid{display:flex;flex-direction:column;gap:10px}
+  .app-card,.app-card-full{padding:14px;height:auto !important;min-height:auto !important;width:100%}
   .app-num{font-size:.65rem;margin-bottom:4px}
   .app-card h3{font-size:.9rem;margin-bottom:4px}
   .app-card p{font-size:.78rem;line-height:1.5}
-  .app-card[style*="grid-column:span 2"]{grid-column:span 1}
   
   .stats-grid{grid-template-columns:1fr 1fr;gap:12px;padding:28px 14px}
   .stat-n{font-size:1.6rem}
@@ -269,9 +271,9 @@ footer p{font-size:.75rem;color:var(--muted)}
         <h3>Conteúdo e Marketing com IA</h3>
         <p>Landing page, post, artigo, SEO, criativos gerados em minutos. O mínimo que todo médico precisa: presença digital profissional.</p>
       </div>
-      <div class="app-card" style="grid-column:span 2">
+      <div class="app-card app-card-full">
         <div class="app-num">APLICAÇÃO 05</div>
-        <h3>Dashboard de Gestão da Clínica</h3>
+        <h3>Dashboard de Gestão da Cl��nica</h3>
         <p>Métricas em tempo real: agendamentos, faturamento, retorno, NPS. Substitui sistemas de R$2-3k/mês por uma solução única e personalizada para a sua clínica.</p>
       </div>
     </div>
